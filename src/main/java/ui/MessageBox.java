@@ -8,8 +8,8 @@ import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 
 public class MessageBox {
-    private static final UnaryOperator<String> MESSAGE_BOX =
-        message -> AsciiArt.BANNER + AsciiArt.BORDER_TOP + message + AsciiArt.BORDER_BOTTOM;
+    private static final UnaryOperator<String> MESSAGE_BOX = message ->
+        AsciiArt.BANNER + AsciiArt.BORDER_TOP + message + AsciiArt.BORDER_BOTTOM;
 
     private static final Function<List<String>, String> BODY_CUT_TO_FIT =
         strings -> strings.stream()

@@ -1,16 +1,16 @@
 package ui;
 
-import gameFiles.GameObject;
+import gameFiles.Page;
 import gameFiles.Interaction;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CommandlineHUD {
-    public static String convertGameObjectTo_outputMessage(final GameObject gameObject){
-        var outputMessage = MessageBox.DISPLAY_MESSAGE.apply(gameObject.getTitle(), gameObject.getBody());
+    public static String convertPageTo_outputMessage(final Page page){
+        var outputMessage = MessageBox.DISPLAY_MESSAGE.apply(page.getTitle(), page.getBody());
 
-        for(Interaction interaction : gameObject.getInteractions()){
+        for(Interaction interaction : page.getInteractions()){
             outputMessage = markInteractiveWords(interaction, outputMessage);
         }
 

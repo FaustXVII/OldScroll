@@ -23,6 +23,4 @@ public class AsciiArt {
         static final String BORDER_LEFT = Styles.RED.apply(border_left);
         static final String BORDER_RIGHT = Styles.RED.apply(border_right);
         static final String BORDER_BOTTOM = Styles.RED.apply(border_bottom);
-
-
 }

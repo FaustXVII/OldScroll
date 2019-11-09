@@ -5,9 +5,9 @@ import lombok.Setter;
 
 import java.util.List;
 
-public class GameObject {
+public class Page {
     @Getter @Setter
-    String Title;
+    String title;
 
     @Getter @Setter
     List<String> body;

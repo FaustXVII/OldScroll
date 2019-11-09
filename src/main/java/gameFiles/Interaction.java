@@ -4,8 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 public class Interaction {
-    @Getter
-    @Setter
+    @Getter @Setter
     String findWord;
 
     @Getter @Setter
