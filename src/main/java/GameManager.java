@@ -20,6 +20,7 @@ class GameManager {
                 interaction -> interaction.getGoto_pageId()));
 
     private final Consumer<Integer> openPageByIndex = pageNumber -> {
+        CommandlineHUD.CLEAR_CONSOLE.run();
         val page = GameBook.get_PAGES_IN_MEMORY().get(pageNumber);
         System.out.println(CommandlineHUD.convertPageTo_outputMessage(page));
         this.openPageByIndex.accept(selectNextPageBy_Interaction(getInteractionOptionsFromPage.apply(page)));

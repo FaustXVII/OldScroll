@@ -15,11 +15,12 @@ public class GameBook {
     private static HashMap<Integer, Page> getPagesFromJSON(){
          try{
              val objectMapper = new ObjectMapper();
-             return objectMapper.readValue(
-                 new File("src/main/resources/gameFile.json"),
-                 objectMapper
-                     .getTypeFactory()
-                     .constructMapType(HashMap.class, Integer.class, Page.class));
+             return objectMapper
+                 .readValue(
+                    new File("src/main/resources/gameFile.json"),
+                    objectMapper
+                        .getTypeFactory()
+                        .constructMapType(HashMap.class, Integer.class, Page.class));
          }catch (IOException io){
              throw new RuntimeException("Data seems corrupted, we can't continue: " + io);
          }

@@ -17,6 +17,11 @@ public class CommandlineHUD {
         return outputMessage;
     }
 
+    public static final Runnable CLEAR_CONSOLE = ()->{
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    };
+
     //ToDo Find a more elegant way to do this.
     private static String markInteractiveWords(Interaction interaction, String message){
         Pattern pattern = Pattern.compile(interaction.getFindWord());
